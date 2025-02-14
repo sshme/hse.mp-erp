@@ -37,6 +37,7 @@ func TestRegisterAndGet(t *testing.T) {
 	got := Get("test1")
 	if got == nil {
 		t.Error("Get() returned nil for existing command")
+		return
 	}
 	if got.Name() != "test1" || got.Description() != "Test Command 1" {
 		t.Errorf("Get() returned wrong command: got %v, want %v", got, cmd1)

@@ -51,8 +51,8 @@ func TestZoo_ContactAnimals(t *testing.T) {
 func TestZoo_AddThing(t *testing.T) {
 	zoo := NewZoo(NewVetClinic(utils.NewLogger()))
 
-	table := &Table{Thing: Thing{name: "Table 1", number: 1}}
-	computer := &Computer{Thing: Thing{name: "Computer 1", number: 2}}
+	table := &domain.Table{Thing: domain.NewThing("Table 1", 1)}
+	computer := &domain.Computer{Thing: domain.NewThing("Computer 1", 2)}
 
 	zoo.AddThing(table)
 	zoo.AddThing(computer)

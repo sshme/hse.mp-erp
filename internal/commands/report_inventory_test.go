@@ -19,7 +19,7 @@ func TestReportInventoryCommand_Execute(t *testing.T) {
 	rabbit, _ := domain.NewAnimal("rabbit", "Bunny", 2, 1, 7)
 	app.Zoo.AddAnimal(rabbit)
 
-	table := internal.Table{Thing: internal.Thing{}}
+	table := domain.Table{Thing: domain.Thing{}}
 	app.Zoo.AddThing(&table)
 
 	cmd := reportInventoryCommand{}

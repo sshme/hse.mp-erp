@@ -1,4 +1,4 @@
-package internal
+package domain
 
 // Thing – base type for all items.
 type Thing struct {
@@ -20,4 +20,8 @@ type Table struct {
 
 type Computer struct {
 	Thing
+}
+
+func NewThing(name string, number int) Thing {
+	return Thing{name: name, number: number}
 }
